@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+.contents {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background: lightblue; */
+    background-image: url(./Car_Animation_Img/sky.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.contents .title-container {
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    background: transparent;
+    top: 10%;
+    left: 50%;
+    translate: -50% -50%;
+    border: 2px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contents .title-container .title {
+    position: absolute;
+    color: darkgoldenrod;
+}
+
+.contents .highway {
+    position: absolute;
+    width: 500%;
+    height: 200px;
+    bottom: 0px;
+    background-image: url(./Car_Animation_Img/road.jpg);
+    /* background-position: center; */
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat-x;
+    animation: highway 6s linear infinite;
+}
+
+.contents .city {
+    position: absolute;
+    width: 500%;
+    height: 250px;
+    bottom: 200px;
+    background-image: url(./Car_Animation_Img/city.png);
+    /* background-size: cover; */
+    background-repeat: repeat-x;
+    animation: city 20s linear infinite;
+}
+
+.contents .car {
+    position: absolute;
+    width: 400px;
+    height: 130px;
+    /* background: red; */
+    background-image: url(./Car_Animation_Img/car.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 100px;
+    left: 40%;
+    animation: car 1s linear infinite;
+}
+
+.contents .front-wheel {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    /* background: green; */
+    background-image: url(./Car_Animation_Img/wheel.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 469px;
+    left: 59.15%;
+    border-radius: 50px;
+    animation: front-wheel 1s linear infinite;
+}
+
+.contents .back-wheel {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    /* background: green; */
+    background-image: url(./Car_Animation_Img/wheel.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 469px;
+    left: 45.15%;
+    border-radius: 50px;
+    animation: back-wheel 1s linear infinite;
+}
+
+@keyframes highway {
+    100% {
+        transform: translateX(-3400px);
+    }
+}
+
+@keyframes city {
+    100% {
+        transform: translateX(-1400px);
+    }
+}
+
+@keyframes car {
+    100% {
+        transform: translateY(-1px);
+    }
+
+    50% {
+        transform: translateY(1px);
+    }
+
+    0% {
+        transform: translateY(-1px);
+    }
+}
+
+@keyframes front-wheel {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes back-wheel {
+    100% {
+        transform: rotate(360deg);
+    }
+}
